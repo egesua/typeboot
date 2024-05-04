@@ -1,10 +1,13 @@
 import './App.css'
+import TodoInput from './components/TodoInput';
+import TodoResult from './components/TodoResult';
 
 function App() {
 
   return (
     <div>
-      React Typescript
+      <TodoInput />
+      <TodoResult />
     </div>
   )
 }
