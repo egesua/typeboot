@@ -11,6 +11,10 @@ const TodoResult: React.FC<TodoResultProps> = ({todos, setTodos}) => {
         setTodos(todos.filter(todo => todo.id != id))
     }
 
+    const updateFunction = (id: number) => {
+        setTodos(todos.map(td => (td.id == id ? {...td, isColor: !td.isColor} : td)))
+    }
+
   return (
     <div>
     {
@@ -23,7 +27,7 @@ const TodoResult: React.FC<TodoResultProps> = ({todos, setTodos}) => {
                     <span onClick={() => deleteFunction(todo.id)}>
                         Delete
                     </span>
-                    <span>
+                    <span onClick={() => updateFunction(todo.id)}>
                         Colorize
                     </span>
                 </div>
