@@ -22,7 +22,7 @@ function App() {
   return (
     <div>
       <TodoInput todo={todo} setTodo={setTodo} addFunction={addFunction} />
-      <TodoResult />
+      <TodoResult todos={todos} setTodos={setTodos} />
     </div>
   );
 }
